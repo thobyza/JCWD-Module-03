@@ -1,0 +1,37 @@
+[
+    {
+        "name": "tuna",
+        "category": "food",
+        "nominal": 20000,
+        "id": 1,
+        "date": "2023-10-17"
+    },
+    {
+        "name": "milk",
+        "category": "food",
+        "nominal": 40000,
+        "id": 2,
+        "date": "2023-10-17"
+    },
+    {
+        "name": "car service auto 2000",
+        "category": "transportation",
+        "nominal": 500000,
+        "id": 3,
+        "date": "2023-10-17"
+    },
+    {
+        "name": "car gasoline",
+        "category": "transportation",
+        "nominal": 200000,
+        "id": 4,
+        "date": "2023-10-17"
+    },
+    {
+        "name": "dentist check-up ",
+        "category": "healthcare",
+        "nominal": 400000,
+        "id": 5,
+        "date": "2023-10-17"
+    }
+]
