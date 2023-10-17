@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "toby",
+      "email": "toby@gmail.com",
+      "password": "123"
+    },
+    {
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "asdfghhj",
+      "id": 3
+    },
+    {
+      "name": "john smith",
+      "email": "john@gmail.com",
+      "password": "com",
+      "id": 4
+    },
+    {
+      "name": "nella anne",
+      "email": "nella@mail.com",
+      "password": "nella123",
+      "id": 5
+    }
+  ],
+  "tweets": [
+    {
+      "name": "toby",
+      "email": "toby@gmail.com",
+      "tweet": "Help me",
+      "id": 1
+    },
+    {
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "tweet": "Hello there, wassuppp!!",
+      "id": 2
+    },
+    {
+      "name": "john smith",
+      "email": "john@gmail.com",
+      "tweet": "hey hey im John the great",
+      "id": 3
+    },
+    {
+      "name": "toby",
+      "email": "toby@gmail.com",
+      "tweet": "test 123",
+      "id": 4
+    }
+  ]
+}

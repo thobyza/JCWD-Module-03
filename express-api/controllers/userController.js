@@ -1,8 +1,6 @@
-const data = [
-    { id: 1, username: "User 1", password: "asd" },
-    { id: 2, username: "User 2", password: "asd" },
-    { id: 3, username: "User 3", password: "asd" }
-]
+const fs = require('fs')
+
+const data = JSON.parse(fs.readFileSync('./db.json', 'utf-8'))
 
 module.exports = {
     getAll: (req, res) => {
@@ -21,13 +19,17 @@ module.exports = {
 
     register: (req, res) => {
         // finding the biggest id in the data, and add 1 for the new User
-        const id = Math.max(...data.map((item) => item.id)) + 1
+        const id = data.length ? Math.max(...data.map((item) => item.id)) + 1 : 1;
+        console.log(id);
 
         // setting id to the new user
         req.body.id = id
 
         // pushing new user from what has been inputted in the body
         data.push(req.body)
+
+        // update data di db.json ditambah data yg baru, rewriting 
+        fs.writeFileSync('./db.json', JSON.stringify(data), 'utf-8')
 
         // sending response 
         res.status(200).send("Register success")
@@ -40,6 +42,7 @@ module.exports = {
         if (index >= 0) {
             data.splice(index, 1)
             res.status(200).send(data)
+            fs.writeFileSync('./db.json', JSON.stringify(data), 'utf-8')
         } else {
             res.status(400).send("User not found")
         }
@@ -53,6 +56,7 @@ module.exports = {
         if (userIndex >= 0) {
             data[userIndex] = { ...data[userIndex], ...updateData };
             res.status(200).send(data[userIndex]);
+            fs.writeFileSync('./db.json', JSON.stringify(data), 'utf-8')
         } else {
             res.status(400).send({ message: "User not found" })
         }

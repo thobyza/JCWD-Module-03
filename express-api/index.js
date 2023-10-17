@@ -5,7 +5,7 @@ const PORT = 2000;
 
 const app = express();
 
-// agar express bisa nerima body
+// agar express bisa nerima/nangkep body
 app.use(express.json())
 
 //      route,   handler
